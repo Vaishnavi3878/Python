@@ -1,0 +1,15 @@
+from tkinter import *
+def changeColor():
+    c=t1.get()
+    window.configure(background=c)
+window=Tk()
+window.geometry("600x400")
+window.title("Color Change...")
+window.configure(background="gray")
+l1=Label(window,text="Color",bg="gray")
+t1=Entry(window)
+b1=Button(window,text="Apply",fg="Black",bg="gray",command=changeColor)
+l1.grid(row=0,column=0)
+t1.grid(row=0,column=1)
+b1.grid(row=0,column=2)
+window.mainloop()
